@@ -1,0 +1,63 @@
+<h1 class="blue-grey-text animated rotateInDownLeft">Contact</h1>
+<div class="row">
+    <div class="col s12 m12 l12">
+        <div class="card contact z-depth-5 animated rotateInUpLeft">
+            <div class="card-content">
+                {{!-- Main Card Row --}}
+                <div class="row">
+                    <div class="col s12 m6 l6 center-align">
+                        <img src="/assets/ShehbazWallpaper.jpg" alt="Developer Image"
+                            class="responsive-img circle img-small">
+                    </div>
+                    <div class="col s12 m6 l6">
+                        <h2><span class="blue-grey-text">Shehbaz</span>
+                            Ansari</h2>
+                        <h5><span class="blue-grey-text">Software</span> Engineer</h5>
+                        {{!-- Chip Row --}}
+                        <div class="row">
+                            <div class="col s12 m12 l12">
+                                <div class="chip red lighten-2 white-text">
+                                    <i class="fas fa-phone-alt"></i>
+                                    9137625108
+                                </div>
+                                <div class="chip red lighten-2 white-text">
+                                    <i class="fab fa-whatsapp"></i>
+                                    9967715961
+                                </div>
+                            </div>
+                            <div class="col s12 m12 l12">
+                                <div class="chip red lighten-2 white-text">
+                                    <i class="fab fa-google"></i>
+                                    shehbaz2499@gmail.com
+                                </div>
+                            </div>
+
+                        </div>
+                        {{!-- Chip Row End --}}
+                    </div>
+                </div>
+                {{!-- Main Card Row End --}}
+            </div>
+        </div>
+    </div>
+</div>
+{{!-- Contact Navbar --}}
+<ul class="sidenav" id="mobile-demo">
+    <li>
+        <div class="user-view">
+            <div class="background">
+                <img src="/assets/backgroundImage.jpg" alt="Background" class="responsive-img">
+            </div>
+            <a href="#"><img src="{{image}}" class="circle responsive-img"></a>
+            <a href="#"><span class="white-text name">{{fullName}}</span></a>
+            <a href="#"><span class="white-text email">😎</span></a>
+        </div>
+    </li>
+    <li><a href="/stories">Public Stories</a></li>
+    <li><a href="/dashboard">Dashboard</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a href="/auth/logout">Logout</a></li>
+</ul>

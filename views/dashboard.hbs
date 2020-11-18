@@ -1,0 +1,61 @@
+<h6>Dashboard</h6>
+<h1 class="animated bounce">Welcome <span class="blue-grey-text">{{name}}</span></h1>
+<p>Here are your stories</p>
+
+{{#if stories}}
+<table class="highlight centered animated fadeInUp">
+    <thead class="red lighten-2">
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each stories}}
+        <tr>
+            <td><a href="/stories/{{_id}}" class="blue-grey-text">{{title}}</a></td>
+            <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+            <td><span class="dash-status">{{status}}</span></td>
+            <td>
+                <div class="buttonDirection">
+                    <a href="/stories/edit/{{_id}}" class="btn">
+                        <i class="fas fa-edit fa-small"></i>
+                    </a>
+                    <form action="/stories/{{_id}}?_method=DELETE" method="POST" id="delete-form">
+                        <button type="submit" class="btn red">
+                            <i class="fas fa-trash fa-small"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<p>You Have Not Created Any Stories</p>
+{{/if}}
+
+{{!-- DashBoard Navbar --}}
+<ul class="sidenav" id="mobile-demo">
+    <li>
+        <div class="user-view">
+            <div class="background">
+                <img src="/assets/backgroundImage.jpg" alt="Background" class="responsive-img">
+            </div>
+            <a href="#"><img src="{{image}}" class="circle responsive-img"></a>
+            <a href="#"><span class="white-text name">{{fullName}}</span></a>
+            <a href="#"><span class="white-text email">😎</span></a>
+        </div>
+    </li>
+    <li><a href="/stories">Public Stories</a></li>
+    <li><a href="/dashboard">Dashboard</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a href="/auth/logout">Logout</a></li>
+</ul>

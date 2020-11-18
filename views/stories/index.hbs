@@ -1,0 +1,48 @@
+<h1 class="blue-grey-text">Stories</h1>
+<div class="row">
+    {{#each stories}}
+    <div class="col s12 m4">
+        <div class="card animated rubberBand">
+            <div class="card-image">
+                <!--Seting global varaible in App.js to use ../user globally -->
+                {{{editIcon user ../user _id}}}
+            </div>
+            <div class="card-content center-align">
+                <h5>{{title}}</h5>
+                <p>{{stripTags (truncate body 150)}}</p>
+                <br>
+                <div class="chip">
+                    <img src="{{user.image}}" alt="Gmail Profile Photo">
+                    <a href="/stories/user/{{user._id}}">{{user.displayName}}</a>
+                </div>
+            </div>
+            <div class="card-action center-align">
+                <a href="/stories/{{_id}}" class="btn red lighten-2 waves-effect">Read More...</a>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <p>No stories to display</p>
+    {{/each}}
+</div>
+
+{{!-- Index Public Stories Navbar --}}
+<ul class="sidenav" id="mobile-demo">
+    <li>
+        <div class="user-view">
+            <div class="background">
+                <img src="/assets/backgroundImage.jpg" alt="Background" class="responsive-img">
+            </div>
+            <a href="#"><img src="{{image}}" class="circle responsive-img"></a>
+            <a href="#"><span class="white-text name">{{fullName}}</span></a>
+            <a href="#"><span class="white-text email">😎</span></a>
+        </div>
+    </li>
+    <li><a href="/stories">Public Stories</a></li>
+    <li><a href="/dashboard">Dashboard</a></li>
+    <li><a href="/contact">Contact</a></li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a href="/auth/logout">Logout</a></li>
+</ul>

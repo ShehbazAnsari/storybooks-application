@@ -1,0 +1,38 @@
+
+p {
+    margin: 10px 0px !important;
+}
+
+.main-container{
+    background-color: #333  ;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    width: 400px;
+    text-align: center;    
+}
+
+.fa-small{
+font-size: 16px !important;
+}
+
+.buttonDirection{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-evenly;
+}
+.contact{
+    border: 10px solid lightcoral;
+    
+    border-radius: 10px;
+}
+.img-small {
+  width: 180px;
+}
+.marginBottom{
+    margin-bottom: 100px !important;
+}
