@@ -1,6 +1,7 @@
 const path = require('path')
 const express = require('express')
 const mongoose = require('mongoose')
+const cors = require('cors')
 const dotenv = require('dotenv')
 const colors = require('colors')
 const exphbs = require('express-handlebars')
@@ -24,12 +25,16 @@ connectDB()
 
 const app = express()
 
+
 //Body Parser
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
 //Method Override For Update And Delete (PUT & DELETE)
 app.use(methodOverride('_method'))
+
+//Cors
+app.use(cors())
 
 //Logging
 if (process.env.NODE_ENV === 'development') {
